@@ -1,0 +1,31 @@
+package com.abhinav.interview.coding.review;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class MapsExample {
+
+	public static void main(String[] args) {
+		
+List<Map<String, Integer>> listOfMaps = new ArrayList<>();
+		
+		Map<String, Integer> map1 = new HashMap<>();
+		map1.put("Abhinav", 1);
+		map1.put("Aniket", 2);
+		
+		Map<String, Integer> map2 = new HashMap<>();
+		map2.put("Abhinav", 1);
+		map2.put("Swati", 4);
+		
+		listOfMaps.add(map1);
+		listOfMaps.add(map2);
+		
+		Set<Entry<String, Integer>> collect = listOfMaps.stream().flatMap(s -> s.entrySet().stream()).collect(Collectors.toSet());
+		System.out.println(collect);
+	}
+}

@@ -1,0 +1,22 @@
+package com.abhinav.intrvw.coding;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class CodingPractice {
+
+	public static void main(String[] args) {
+		
+		String str = "aAbBcCdD";
+		Map<Character, Long> collect = str.chars().mapToObj(ch -> (char)  ch).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		System.out.println(collect);
+		
+		List<String> strings = Arrays.asList("Alice","Bob","Charlie","Dean");
+		Map<Character, Long> collect2 = strings.stream().map(str -> str.toLowerCase())mapflatMapToInt(ch -> ch.chars()).mapToObj(ch-> (char) ch).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		System.out.println(collect2);
+	}
+	
+}

@@ -1,0 +1,47 @@
+package com.abhinav.intrvw.coding;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class CodingPractice {
+
+	public static void main(String[] args) {
+		
+		String str = "aAbBcCdD";
+		Map<Character, Long> collect = str.chars().mapToObj(ch -> (char)  ch).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		System.out.println(collect);
+	//---------------------------------------------------------
+		
+		List<String> strings = Arrays.asList("Alice","Bob","Charlie","Dean");
+		Map<Character, Long> collect2 = strings.stream().map(s -> s.toLowerCase()).flatMapToInt(ch -> ch.chars()).mapToObj(ch-> (char) ch).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		System.out.println(collect2);
+	//---------------------------------------------------------
+		List<Map<String, Integer>> listOfMaps = new ArrayList<>();
+
+		Map<String, Integer> map1 = new HashMap<>();
+		map1.put("Abhinav", 1);
+		map1.put("Aniket", 2);
+
+		Map<String, Integer> map2 = new HashMap<>();
+		map2.put("Abhinav", 1);
+		map2.put("Swati", 4);
+
+		listOfMaps.add(map1);
+		listOfMaps.add(map2);
+		
+		List<String> collect3 = map1.keySet().stream().collect(Collectors.toList());
+		System.out.println(collect3);
+		
+	// Remove even Numbers from list of ints
+		List<Integer> numbers = Arrays.asList(10,20,30,40,23,25,27);
+		
+		List<Integer> collect4 = numbers.stream().filter(s -> s%2 !=0).collect(Collectors.toList());
+		System.out.println(collect4);
+	}
+	
+}

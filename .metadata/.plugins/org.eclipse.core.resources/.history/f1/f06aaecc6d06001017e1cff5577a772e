@@ -1,0 +1,24 @@
+package com.abhinav.intrvw.coding;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CodingExample1 {
+
+	public static void main(String[] args) {
+		
+	// list of Students, print in opposite order of name
+		
+		
+		List<Student> studentList = new ArrayList<Student>();
+		studentList.add(new Student(1,"Abhinav"));
+		studentList.add(new Student(2,"Bhavana"));
+		studentList.add(new Student(3,"Chikram"));
+		studentList.add(new Student(4,"Dhanno"));
+		studentList.add(new Student(5,"Chameli"));
+		studentList.forEach(s -> System.out.println(s));
+		
+	}
+
+}
+

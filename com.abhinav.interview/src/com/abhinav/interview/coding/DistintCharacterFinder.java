@@ -1,0 +1,22 @@
+package com.abhinav.interview.coding;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class DistintCharacterFinder {
+
+	public static void main(String[] args) {
+		List<String> strings = Arrays.asList("apple","banana", "orange", "grape", "kiwi");
+		Set<Character> distinctChars = findDistinctChars(strings);
+		System.out.println(distinctChars);
+	}
+
+	private static Set<Character> findDistinctChars(List<String> strings) {
+		return strings.stream()
+				.flatMapToInt(str -> str.chars())
+				.mapToObj(ch -> (char) ch).collect(Collectors.toSet());
+	}
+
+}

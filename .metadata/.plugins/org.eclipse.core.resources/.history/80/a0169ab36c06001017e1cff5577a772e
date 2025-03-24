@@ -1,0 +1,28 @@
+package com.abhinav.intrvw.coding;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class CodingExample1 {
+
+	public static void main(String[] args) {
+		
+		String str1 = "abcdABCDabcd";
+		char[] charArray = str1.toCharArray();
+		
+		// Map<Character,Long> charMap = str1.chars().mapToObj(ch -> (char) ch).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		
+		int count = 0;
+		Map<Character,Integer> charMap1 = new HashMap<Character, Integer>();
+		for (int i=0; i<charArray.length; i++) {
+			char ch = charArray[i];
+			charMap1.put(ch, count);
+		}
+		
+		System.out.println(charMap1);
+	}
+
+}
+

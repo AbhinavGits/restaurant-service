@@ -1,0 +1,18 @@
+package com.abhinav.intrvw.coding;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class EmployeeDriver {
+
+	public static void main(String[] args) {
+		List<Employee> employees = Arrays.asList(new Employee(101, "Alice", "IT", 60000),
+				new Employee(102, "Bob", "HR", 50000), new Employee(103, "Charlie", "IT", 70000),
+				new Employee(104, "David", "Finance", 65000), new Employee(105, "Eve", "HR", 55000),
+				new Employee(106, "Frank", "Finance", 62000));
+		
+		employees.stream().collect(Collectors.groupingBy(Employee::getDepartment))
+
+	}
+}

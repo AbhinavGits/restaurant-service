@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;integer&apos; from expression &apos;list.stream().max((i,j) -&gt; i.compareTo(j)).get()&apos;&#x0D;&#x0A;- Original project: &apos;com.abhinav.interview&apos;&#x0D;&#x0A;- Variable name: &apos;integer&apos;&#x0D;&#x0A;- Destination method: &apos;com.abhinav.interview.coding.Example.main(...)&apos;&#x0D;&#x0A;- Variable expression: &apos;list.stream().max((i,j) -&gt; i.compareTo(j)).get()&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;integer&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;com.abhinav.interview.coding{Example.java" name="integer" replace="true" replaceAllInThisFile="false" selection="270 48" stamp="1731991053164" varType="false" version="1.0"/>
+</session>
