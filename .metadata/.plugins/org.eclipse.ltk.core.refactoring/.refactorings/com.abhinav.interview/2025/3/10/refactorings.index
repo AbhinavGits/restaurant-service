@@ -1,8 +1,0 @@
-1741329643617	Extract local variable 'charArray'
-1741336295781	Extract local variable 'list'
-1741336378163	Extract local variable 'entry'
-1741339154094	Extract local variable 'collect'
-1741340788668	Extract local variable 'collect'
-1741362418985	Extract local variable 'listOfIntegers'
-1741362893438	Extract local variable 'average'
-1741362928011	Extract local variable 'orElse'
